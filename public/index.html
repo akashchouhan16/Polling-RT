@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PollingRT</title>
+    <link rel="shortcut icon" type="image/png" href="/public/favicon/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        #overlay {
+            height: 100vh;
+            width: 100vw;
+            background:  #101010;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .square {
+            width: 80px;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .circle {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+                opacity: 0%;
+            }
+            40% {
+                opacity: 20%;
+            }
+            100% {
+                transform: rotate(360deg);
+                opacity: 100%;
+            }
+        }
+        @keyframes color {
+            from {
+                background: #0f4c75;
+            }
+            to {
+                background: #3282b8;
+            }
+        }
+
+        .square {
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition-timing-function: linear;
+        }
+        .circle {
+            animation-name: color;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition-timing-function: linear;
+        }
+        .circle {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- ==================================================================== -->
+    <div class="container">
+        <h1>Polling RT</h1>
+        <p>Vote for your favourite from the List : </p>
+        <form action="#" id="vote-form">
+            <p>
+                <label for="windows">
+                    <input type="radio" name="os" id="windows" value="Windows">
+                    <span>Windows</span>
+                </label>
+            </p>
+            <p>
+                <label for="macos">
+                    <input type="radio" name="os" id="macos" value="Macos">
+                    <span>Mac Os</span>
+                </label>
+            </p>
+            <p>
+                <label for="linux">
+                    <input type="radio" name="os" id="linux" value="Linux">
+                    <span>Linux Distro</span>
+                </label>
+            </p>
+            <p>
+                <label for="others">
+                    <input type="radio" name="os" id="others" value="Others">
+                    <span>Others</span>
+                </label>
+            </p>
+            <input type="submit" value="Vote" class="btn">
+        </form>
+
+        <br><br>
+        <div id="chartContainer" style="height: 300px; width: 100%;">
+
+        </div>
+    </div>
+    
+
+
+
+    <!-- Jquery CDN For Materialize -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <!-- Materialize CSS Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Pusher Front-End CDN  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.min.js"
+        integrity="sha512-XVnzJolpkbYuMeISFQk6sQIkn3iYUbMX3f0STFUvT6f4+MZR6RJvlM5JFA2ritAN3hn+C0Bkckx2/+lCoJl3yg=="
+        crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/7.0.3/pusher.js"
+        integrity="sha512-ChO2LAXg+AJFABJ8me72N+/4Mkfj1MN6FgtsPY+XwRHMWchJFnkwqRxAqfpNxZy24BtoUB39GW/jp3MrSNKPag=="
+        crossorigin="anonymous"></script> -->
+    <!-- Canvas JS CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"
+            integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA=="
+            crossorigin="anonymous"></script>
+    <!-- Custom JS File -->
+    <script src="main.js"></script>
+</body>
+</html>
