@@ -28,7 +28,7 @@ npm run start
 
 ## Connecting to the DataBase Using MongoDB
 
-- Make sure latest version of **dotenv** Modules is installed.
+- Make sure latest version of **dotenv** Module is installed.
 - Create a **.env** file.
 - For setting up a local MongoDb DataBase
   - Mongo must be locally installed on your system.
