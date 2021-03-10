@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Pusher = require('pusher');
 const mongoose = require('mongoose');
-
+require('dotenv').config();
 
 const pusher = new Pusher({
-  appId: "1169254",
-  key: "c0d567a8dd6b88cd244d",
-  secret: "7f5d30e66b4c0c63cb50",
+  appId: process.env.appID,
+  key: process.env.KEY,
+  secret: process.env.SECRET,
   cluster: "ap2",
   useTLS: true
 });
@@ -24,9 +24,9 @@ router.post('/', (req,res)=>{
         points : 1
     }
     new Vote(newVote).save().then(vote =>{
-        pusher.trigger("get-poll", "get-vote", { //os-poll, os-vote
+        pusher.trigger("get-poll", "get-vote", { 
         points : parseInt(vote.points),
-        os : vote.os //os : req.body.os
+        os : vote.os 
     });
     return res.json({success : true, message : 'Thank you for voting!'});
     })
