@@ -47,10 +47,20 @@ npm run start
 
 ## Preview :
 
-<img src="./previews/main_preview.png" width="55%">
-<!-- 
-![mainframe](./previews/main_preview.png) -->
+<img src="./previews/main_preview.png" width="65%">
 
-#### **Note** :
+---
 
-> Front-End is mostly hardcoded for OS Polling, will make it more dynamic when I feel like it **:v**.
+## [Application Info](https://github.com/akashchouhan16/Polling-RT "Polling RT")
+
+### Note:
+
+> Front-End is mostly hardcoded for OS Polling, will make it more dynamic when I feel like it **:v**
+
+### Version
+
+**[1.0.0](https://github.com/akashchouhan16/Polling-RT "Version")**
+
+### License
+
+**[MIT](https://github.com/akashchouhan16/Polling-RT/blob/master/LICENSE "License")**
