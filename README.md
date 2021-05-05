@@ -1,5 +1,11 @@
 # Polling-RT
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-red.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity "Repo Maintained")
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/akashchouhan16/ "github.com/akashchouhan16")
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/ "VSCODE")
+[![GitHub issues](https://img.shields.io/github/issues/akashchouhan16/Polling-RT.svg)](https://github.com/akashchouhan16/Polling-RT/issues)
+[![GitHub stars](https://img.shields.io/github/stars/akashchouhan16/Polling-RT.svg?style=social)](https://github.com/akashchouhan16/Polling-RT/stargazers) ![GitHub last commit](https://img.shields.io/github/last-commit/akashchouhan16/Polling-RT.svg)
+
 A real-time Polling application using Express, MongoDb, CanvasJS, PusherJS & MaterializeCSS.
 
 ## How to run the application?
@@ -33,9 +39,9 @@ npm run start
 - For setting up a local MongoDb DataBase
   - Mongo must be locally installed on your system.
   - Add to **.env**,
-    - localDBURL='`mongodb://localhost:27017/Polling-RT`'
+    - **localDBURL**='`mongodb://localhost:27017/Polling-RT`'
 - For setting up a Cloud Database Using Atlas, Add to **.env**
-  - cloudDBURL='`mongodb+srv://<EnterMongoDBAtlas_UserName>:<EnterMongoDBAtlas_Password>@cluster0.c1tnc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`'
+  - **cloudDBURL**='`mongodb+srv://<EnterMongoDBAtlas_UserName>:<EnterMongoDBAtlas_Password>@cluster0.c1tnc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`'
 
 ---
 
@@ -47,4 +53,4 @@ npm run start
 
 #### **Note** :
 
-Front-End is mostly hardcoded for OS Polling, will make it more dynamic when I feel like it **:v**.
+> Front-End is mostly hardcoded for OS Polling, will make it more dynamic when I feel like it **:v**.
